@@ -1,0 +1,90 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f8f9fd;
+    color: #2d2d2d;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    max-width: 1000px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.8em;
+    color: #5c6bc0;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #555;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
+/* Стиль галереї */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding-bottom: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+button {
+    background-color: #5c6bc0;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1em;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #3f51b5;
+}
+
+button:active {
+    background-color: #3949ab;
+    transform: scale(0.97);
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.2em;
+    }
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
